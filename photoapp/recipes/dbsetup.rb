@@ -5,6 +5,6 @@ execute "mysql-create-table" do
   caption VARCHAR(255),
   PRIMARY KEY (id)
 )'"
-  not_if "/usr/bin/mysql -u#{node[:deploy][:myphpapp][:database][:username]} -p#{node[:deploy][:myphpapp][:database][:password]} #{node[:deploy][:myphpapp][:database][:database]} -e'SHOW TABLES' | grep [:phpapp][:dbtable]"
+  not_if "/usr/bin/mysql -u#{node[:deploy][:myphpapp][:database][:username]} -p#{node[:deploy][:myphpapp][:database][:password]} #{node[:deploy][:myphpapp][:database][:database]} -e'SHOW TABLES' | grep [:photoapp][:dbtable]"
   action :run
 end
