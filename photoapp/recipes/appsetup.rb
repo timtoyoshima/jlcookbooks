@@ -1,4 +1,4 @@
-log node[:myphotoapp][:dbtable].inspect
+log node[:photoapp][:dbtable].inspect
 
 script "install_composer" do
   interpreter "bash"
