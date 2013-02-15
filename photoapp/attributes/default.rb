@@ -1,1 +1,1 @@
-default[:photoapp][:dbtable] = 'photo'
+default[:photoapp][:dbtable] = 'foto'
