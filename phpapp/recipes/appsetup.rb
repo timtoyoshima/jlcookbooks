@@ -18,7 +18,7 @@ template "#{node[:deploy][:myphpapp][:deploy_to]}/current/db-connect.php" do
 
 if platform?("ubuntu")
   owner "www-data"
-elsif platform?("rhel") && platform_family?("amazon")   
+elsif platform?("amazon")   
   owner "apache"
 end
 
