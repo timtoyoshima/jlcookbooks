@@ -28,7 +28,7 @@ end
       :user =>     (node[:deploy][:myphotoapp][:database][:username] rescue nil),
       :password => (node[:deploy][:myphotoapp][:database][:password] rescue nil),
       :db =>       (node[:deploy][:myphotoapp][:database][:database] rescue nil),
-      :table =>    (node[:myphotoapp][:dbtable] rescue nil),
+      :table =>    (node[:photoapp][:dbtable] rescue nil),
       :s3bucket => (node[:photobucket] rescue nil)
   )
 
