@@ -1,16 +1,5 @@
 log node[:phpapp][:dbtable].inspect
 
-script "install_composer" do
-  interpreter "bash"
-  user "root"
-  cwd "#{node[:deploy][:myphpapp][:deploy_to]}/current"
-  code <<-EOH
-  curl -s https://getcomposer.org/installer | php
-  php composer.phar install
-  EOH
-end
-
-
 template "#{node[:deploy][:myphpapp][:deploy_to]}/current/db-connect.php" do
   source "db-connect.php.erb"
   mode 0660
